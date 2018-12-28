@@ -18,21 +18,6 @@ import java.util.TreeMap;
  */
 public class FlightServices {
 
-	public static void main(String[] args) throws Exception {
-		HashMap<Object, Object> combineMap = FlightFacade.getAllFlightDetails();
-		System.out.println(combineMap);
-		Map<Object, Object> outputMapASC = getSortedCollection(combineMap,
-				"ASC");
-		Map<Object, Object> outputMapDES = getSortedCollection(combineMap,
-				"DES");
-		System.out.println();
-		System.out.println("Ascending order.......");
-		System.out.println(outputMapASC);
-		System.out.println("Descending order.......");
-		System.out.println(outputMapDES);
-
-	}
-
 	private static Map<Object, Object> getSortedCollection(HashMap<Object, Object> combineMap, String type) {
 		Map<Object, Object> hmap = new TreeMap<>();
 		hmap.putAll(combineMap);
